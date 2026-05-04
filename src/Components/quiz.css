@@ -1,0 +1,17 @@
+/* Quiz.css */
+
+.container .correct {
+  border-color: #22c55e !important;
+  background-color: #dcfce7 !important;
+  color: #15803d !important;
+}
+
+.container .wrong {
+  border-color: #ef4444 !important;
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+li:hover {
+  cursor: alias;
+}

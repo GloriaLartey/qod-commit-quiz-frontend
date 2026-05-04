@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wiggle-emoji {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Smooth gradient animation */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-animated-gradient {
+  background: linear-gradient(
+    45deg,
+    #9333ea,
+    blue,
+    #9333ea,
+    blue,
+    #9333ea,
+    blue,
+    #9333ea
+  );
+  background-size: 400% 400%; /* make the gradient bigger for smooth movement */
+  animation: gradient-move 10s ease infinite;
+}
+
+.home-bg {
+  background: linear-gradient(
+    45deg,
+    #933ae6,
+    blue,
+    black,
+    black,
+    black,
+    blue,
+    #9333ea
+  );
+  background-size: 400% 400%; /* make the gradient bigger for smooth movement */
+  animation: gradient-move 10s ease infinite;
+}
+
+@keyframes gradient-text-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #9333ea,
+    blue,
+    #9333ea,
+    blue,
+    #9333ea,
+    blue,
+    #9333ea
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text; /* clip gradient to text */
+  -webkit-text-fill-color: transparent; /* make text transparent to show gradient */
+  animation: gradient-text-animation 5s ease infinite;
+}
