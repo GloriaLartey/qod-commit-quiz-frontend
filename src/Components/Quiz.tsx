@@ -157,7 +157,7 @@ export default function Quiz({ category }: Props) {
   };
 
   return (
-    <div className="container bg-white mx-auto mt-5 max-w-[450px] md:w-100 h-auto p-4 md:p-6 rounded-2xl">
+    <div className=" bg-white mx-auto mt-5 w-full max-w-[350px] md:w-100 h-auto p-4 md:p-6 rounded-2xl">
       {!showResult ? (
         <>
           {/* HEADER */}
