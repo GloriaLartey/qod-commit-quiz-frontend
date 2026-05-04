@@ -107,7 +107,7 @@ export default function Quiz({ category }: Props) {
       const username = localStorage.getItem("username") || "User";
 
       const leaderboard = JSON.parse(
-        localStorage.getItem("leaderboard") || "[]"
+        localStorage.getItem("leaderboard") || "[]",
       );
 
       leaderboard.push({
@@ -125,7 +125,7 @@ export default function Quiz({ category }: Props) {
   // =========================
   if (isLoading) {
     return (
-      <div className="container bg-purple-100 mx-auto mt-5 w-full max-w-[520px] md:w-130 p-4 md:p-6 rounded-2xl text-center">
+      <div className=" bg-purple-100 mx-auto mt-5 w-full max-w-[520px] md:w-130 p-4 md:p-6 rounded-2xl text-center">
         Loading quiz...
       </div>
     );
@@ -133,15 +133,14 @@ export default function Quiz({ category }: Props) {
 
   if (!questions.length) {
     return (
-      <div className="container bg-purple-100 mx-auto mt-5 w-full max-w-[520px] md:w-130 p-4 md:p-6 rounded-2xl text-center">
+      <div className="bg-white mx-auto mt-5 w-full max-w-[520px] md:w-130 p-4 md:p-6 rounded-2xl text-center">
         No questions found for this category.
       </div>
     );
   }
 
   const usernameRaw = localStorage.getItem("username") || "User";
-  const name =
-    usernameRaw.charAt(0).toUpperCase() + usernameRaw.slice(1);
+  const name = usernameRaw.charAt(0).toUpperCase() + usernameRaw.slice(1);
 
   const getMessage = () => {
     const percent = (score / questions.length) * 100;
@@ -158,8 +157,7 @@ export default function Quiz({ category }: Props) {
   };
 
   return (
-    <div className="container bg-purple-50 mx-auto mt-5 max-w-[360px] md:w-100 h-auto p-4 md:p-6 rounded-2xl">
-
+    <div className="container bg-white mx-auto mt-5 max-w-[450px] md:w-100 h-auto p-4 md:p-6 rounded-2xl">
       {!showResult ? (
         <>
           {/* HEADER */}
@@ -168,13 +166,9 @@ export default function Quiz({ category }: Props) {
               Question {index + 1} of {questions.length}
             </div>
 
-            <div className="font-semibold text-gray-700">
-              Score: {score}
-            </div>
+            <div className="font-semibold text-gray-700">Score: {score}</div>
 
-            <div className="font-bold text-red-500">
-              ⏱ {timeLeft}s
-            </div>
+            <div className="font-bold text-red-500">⏱ {timeLeft}s</div>
           </div>
 
           {/* PROGRESS */}
@@ -204,7 +198,7 @@ export default function Quiz({ category }: Props) {
                     ${
                       lock
                         ? "cursor-default"
-                        : "cursor-pointer hover:bg-purple-100"
+                        : "cursor-pointer hover:bg-purple-50"
                     }
                     ${
                       selected !== null && isCorrect
@@ -229,7 +223,6 @@ export default function Quiz({ category }: Props) {
         </>
       ) : (
         <div className="text-center mt-5 mb-5 px-2">
-
           <h2 className="text-2xl font-bold text-purple-600 mb-5">
             Quiz Completed
           </h2>
@@ -239,8 +232,8 @@ export default function Quiz({ category }: Props) {
               score < 5
                 ? "text-red-600"
                 : score <= 6
-                ? "text-green-600"
-                : "text-blue-600"
+                  ? "text-yellow-600"
+                  : "text-green-600"
             }`}
           >
             {score} / {questions.length}
@@ -266,7 +259,6 @@ export default function Quiz({ category }: Props) {
           >
             Restart Quiz
           </button>
-
         </div>
       )}
     </div>
