@@ -1,7 +1,10 @@
 import axios from "axios";
 
+const isDev = import.meta.env.DEV
+const baseURL = isDev ? "http://localhost:3000/api" : "https://qod-commit-quiz-backend.onrender.com"
+
 const api = axios.create({
-  baseURL: "http://localhost:3000/api", // your backend URL
+  baseURL, // your backend URL
 });
 
 //Attach token automatically (important)

@@ -1,12 +1,14 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3000/api";
+const isDev = import.meta.env.DEV
+const baseURL = isDev ? "http://localhost:3000/api" : "https://qod-commit-quiz-backend.onrender.com"
+
 
 // ==============================
 // GET QUIZ
 // ==============================
 export const getQuiz = async (category: string) => {
-  const res = await axios.get(`${baseUrl}/quiz/${category}`);
+  const res = await axios.get(`${baseURL}/quiz/${category}`);
   return res.data;
 };
 
@@ -20,7 +22,7 @@ export const submitScore = async (payload: {
   const token = localStorage.getItem("token");
 
   const res = await axios.post(
-    `${baseUrl}/quiz/score`,
+    `${baseURL}/quiz/score`,
     payload,
     {
       headers: {
