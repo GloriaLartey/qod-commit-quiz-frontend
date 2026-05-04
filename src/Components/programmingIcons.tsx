@@ -17,7 +17,7 @@ const ProgrammingIcons = [
     color: "text-yellow-400",
     top: "35%",
     left: "10%",
-    size: "text-4xl",
+    size: "text-xl",
     animation: "animate-bounce-slow",
   },
   {
@@ -25,7 +25,7 @@ const ProgrammingIcons = [
     color: "text-orange-500",
     top: "15%",
     left: "25%",
-    size: "text-5xl",
+    size: "text-2xl",
     animation: "animate-spin-slow",
   },
   {
@@ -33,7 +33,7 @@ const ProgrammingIcons = [
     color: "text-blue-600",
     top: "90%",
     left: "70%",
-    size: "text-3xl",
+    size: "text-2xl",
     animation: "animate-pulse",
   },
   {
@@ -41,7 +41,7 @@ const ProgrammingIcons = [
     color: "text-cyan-400",
     top: "60%",
     left: "15%",
-    size: "text-4xl",
+    size: "text-xl",
     animation: "animate-bounce",
   },
   {
@@ -49,7 +49,7 @@ const ProgrammingIcons = [
     color: "text-blue-400",
     top: "20%",
     left: "75%",
-    size: "text-5xl",
+    size: "text-2xl",
     animation: "animate-spin",
   },
   {
@@ -57,7 +57,7 @@ const ProgrammingIcons = [
     color: "text-teal-400",
     top: "65%",
     left: "80%",
-    size: "text-4xl",
+    size: "text-2xl",
     animation: "animate-bounce-slow",
   },
   {
@@ -65,7 +65,7 @@ const ProgrammingIcons = [
     color: "text-green-500",
     top: "80%",
     left: "40%",
-    size: "text-4xl",
+    size: "text-xl",
     animation: "animate-pulse",
   },
   {
@@ -73,7 +73,7 @@ const ProgrammingIcons = [
     color: "text-red-600",
     top: "15%",
     left: "60%",
-    size: "text-5xl",
+    size: "text-2xl",
     animation: "animate-bounce",
   },
   {
@@ -81,7 +81,7 @@ const ProgrammingIcons = [
     color: "text-purple-700",
     top: "40%",
     left: "80%",
-    size: "text-3xl",
+    size: "text-xl",
     animation: "animate-spin-slow",
   },
   {
@@ -89,7 +89,7 @@ const ProgrammingIcons = [
     color: "text-blue-800",
     top: "85%",
     left: "20%",
-    size: "text-4xl",
+    size: "text-2xl",
     animation: "animate-pulse",
   },
   {
@@ -97,7 +97,7 @@ const ProgrammingIcons = [
     color: "text-red-500",
     top: "10%",
     left: "90%",
-    size: "text-4xl",
+    size: "text-xl",
     animation: "animate-bounce-slow",
   },
 ];
@@ -108,7 +108,7 @@ export const BackgroundProgrammingIcons: React.FC = () => {
       {ProgrammingIcons.map((iconData, index) => (
         <div
           key={index}
-          className={`absolute ${iconData.color} ${iconData.size} ${iconData.animation} opacity-50 pointer-events-none`}
+          className={`absolute ${iconData.color} ${iconData.size} ${iconData.animation} opacity-35 pointer-events-none`}
           style={{ top: iconData.top, left: iconData.left }}
         >
           {iconData.icon}
