@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Quiz.css";
 import { useQuiz } from "../hooks/useQuiz";
 import { submitScore } from "../api/quiz";
 
