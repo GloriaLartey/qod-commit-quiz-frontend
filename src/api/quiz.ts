@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const isDev = import.meta.env.DEV
-const baseURL = isDev ? "http://localhost:3000/api" : "https://qod-commit-quiz-backend.onrender.com"
+const baseURL = isDev ? "http://localhost:3000/api" : "https://qod-commit-quiz-backend.onrender.com/api"
 
 
 // ==============================
