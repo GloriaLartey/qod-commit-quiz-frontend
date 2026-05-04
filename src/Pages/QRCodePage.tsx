@@ -158,10 +158,10 @@ export default function QRCodePage() {
           {/* ================= DESKTOP ================= */}
           <div className="hidden lg:flex items-center justify-center gap-8">
             {/* QR SECTION */}
-            <div className="p-5 rounded-2xl flex flex-col justify-center items-center text-center w-[400px]">
+            <div className=" rounded-2xl flex flex-col justify-center items-center text-center w-[400px]">
               {/* ✅ STILL HERE (DESKTOP ONLY) */}
               <h2 className="text-2xl font-bold text-purple-900 mb-4 capitalize">
-                {quiz} Quiz QR Code
+                 Quiz QR Code
               </h2>
 
               <h2 className="text-xl font-bold text-purple-700 mb-4">
