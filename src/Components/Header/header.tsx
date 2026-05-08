@@ -122,8 +122,8 @@ export default function Header() {
 
             <button onClick={() => setHelpOpen(true)}>
               <img
-                src="/help.png"
-                className="h-5 w-5 md:h-6 md:w-6 object-contain"
+                src="help.png"
+                className="h-5 w-5 md:h-7 md:w-7 object-contain bg-blue-400 pl-1.5 rounded-full"
               />
             </button>
           </div>
